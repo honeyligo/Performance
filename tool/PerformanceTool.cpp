@@ -11,7 +11,6 @@ const char* SERVER_PIPE_NAME = "/tmp/performance_profiler/_fifo";
 
 void UsageHelp ()
 {
-	printf ("PerformanceTool Tool. Bit Internal Tool\n");
 	printf ("Usage: PerformanceTool -help\n");
 	printf ("Usage: PerformanceTool -pid pid.\n");
 	printf ("Example: PerformanceTool -pid 2345.\n");	
