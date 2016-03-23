@@ -1,0 +1,27 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+SET(CMAKE_CXX_COMPILER "g++")
+SET(CMAKE_C_COMPILER "gcc")
+
+#工程名称
+PROJECT(PerformanceTool)
+
+#编译参数
+SET(CMAKE_CXX_FLAGS "-O2 -std=c++11")
+
+#库引用
+SET(LIBS performance)
+
+#宏定义
+#ADD_DEFINITIONS(-D_LINUX_VERSION)
+
+#附加包含目录
+AUX_SOURCE_DIRECTORY(./ SRC_LIST)
+
+#引用目录
+INCLUDE_DIRECTORIES(../)
+
+#可执行程序编译
+ADD_EXECUTABLE(PerformanceTool ${SRC_LIST})	
+
+#链接库设置
+TARGET_LINK_LIBRARIES(PerformanceTool ${LIBS})
